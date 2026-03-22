@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("/assets/fonts/Fraunces.woff2") format("woff2");
+  font-weight: 300 900;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Cream/off-white background: #F6F1E6 → oklch ~0.959 0.022 89 */
+    --background: 0.959 0.022 89;
+    /* Near-black: #1F1F1F → oklch ~0.18 0 0 */
+    --foreground: 0.18 0 0;
+
+    /* Warm beige card: #EFE5D6 → oklch ~0.929 0.03 80 */
+    --card: 0.929 0.03 80;
+    --card-foreground: 0.18 0 0;
+
+    --popover: 0.959 0.022 89;
+    --popover-foreground: 0.18 0 0;
+
+    /* Deep teal primary: #0F4E4A → oklch ~0.38 0.075 184 */
+    --primary: 0.38 0.075 184;
+    --primary-foreground: 0.98 0 0;
+
+    --secondary: 0.929 0.03 80;
+    --secondary-foreground: 0.18 0 0;
+
+    --muted: 0.929 0.03 80;
+    /* Muted gray: #6B6B6B → oklch ~0.52 0 0 */
+    --muted-foreground: 0.52 0 0;
+
+    /* Accent orange: #C86A2C → oklch ~0.62 0.145 52 */
+    --accent: 0.62 0.145 52;
+    --accent-foreground: 0.98 0 0;
+
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    --border: 0.88 0.018 80;
+    --input: 0.88 0.018 80;
+    --ring: 0.38 0.075 184;
+
+    --chart-1: 0.62 0.145 52;
+    --chart-2: 0.38 0.075 184;
+    --chart-3: 0.52 0.09 160;
+    --chart-4: 0.72 0.12 80;
+    --chart-5: 0.46 0.11 220;
+
+    --sidebar: 0.929 0.03 80;
+    --sidebar-foreground: 0.18 0 0;
+    --sidebar-primary: 0.38 0.075 184;
+    --sidebar-primary-foreground: 0.98 0 0;
+    --sidebar-accent: 0.62 0.145 52;
+    --sidebar-accent-foreground: 0.98 0 0;
+    --sidebar-border: 0.88 0.018 80;
+    --sidebar-ring: 0.38 0.075 184;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    scroll-behavior: smooth;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
